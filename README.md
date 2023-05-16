@@ -22,7 +22,7 @@ void main() {
   ZRow.withSpacing(spacing: 12.2, children: []);
 
   //根据[separated]组件分割内容的Row方法
-  ZRow.withSpacing(separated: SizedBox(width:10), children: []);
+  ZRow.withSeparated(separated: SizedBox(width:10), children: []);
 }
 ```  
 ### Column超集ZColumn
@@ -32,7 +32,7 @@ void main() {
   ZColumn.withSpacing(spacing: 12.2, children: []);
 
   //根据[separated]组件分割内容的Column方法
-  ZColumn.withSpacing(separated: SizedBox(width:10), children: []);
+  ZColumn.withSeparated(separated: SizedBox(width:10), children: []);
 }
 ```  
 ## 附加信息  
