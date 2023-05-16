@@ -1,6 +1,12 @@
+//Column超集拥有Column全部功能方法,额外增加的方法等
+//作者:zr
+//版本:1.0
+//完成时间:2023-05-16
+//许可证: MIT
+
 import 'package:flutter/cupertino.dart';
 import 'package:z_ui/z_ui.dart';
-///Column超集拥有Column全部功能方法,而外增加的方法等
+
 ///ZColumn.withSpacing 根据长度分割
 ///ZColumn.withSeparated 根据组件分割
 class ZColumn extends Column {
