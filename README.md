@@ -1,39 +1,44 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+## 功能说明
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+目前是一些开发过程中需要用到的布局ui的二次封装,增加一些方便开发的方法等  
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
-
-## Features
-
-TODO: List what your package can do. Maybe include images, gifs, or videos.
-
-## Getting started
-
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
-
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
+## 安装方法  
+### 引用  
+`pubspec.yaml`文件`dependencies:`下增加以下内容引用:  
+```yaml
+z_ui_flutter:  
+    git:  
+        url: https://github.com/zrbyhelp/z_ui_flutter.git  
+```  
+### 安装  
+通过命令行安装该内容  
+```bash
+$ pub get
+..
+```  
+## 使用方法  
+### Row超集ZRow  
 ```dart
-const like = 'sample';
-```
+void main() {
+  ///根据[spacing]长度分割内容的Row方法
+  ZRow.withSpacing(spacing: 12.2, children: []);
 
-## Additional information
+  //根据[separated]组件分割内容的Row方法
+  ZRow.withSpacing(separated: SizedBox(width:10), children: []);
+}
+```  
+### Column超集ZColumn
+```dart
+void main() {
+  ///根据[spacing]长度分割内容的Column方法
+  ZColumn.withSpacing(spacing: 12.2, children: []);
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+  //根据[separated]组件分割内容的Column方法
+  ZColumn.withSpacing(separated: SizedBox(width:10), children: []);
+}
+```  
+## 附加信息  
+### 作者:zr  
+### 版本:1.0  
+### 完成时间:2023-05-16  
+### 许可证: MIT  
