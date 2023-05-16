@@ -1,16 +1,11 @@
 import 'package:flutter/cupertino.dart';
+import 'package:z_ui/z_ui.dart';
 
-class ZRow extends Row {
-  ZRow({
-    super.key,
-    super.mainAxisAlignment,
-    super.mainAxisSize,
-    super.crossAxisAlignment,
-    super.textDirection,
-    super.verticalDirection,
-    super.textBaseline,
-    super.children,
-  });
+///Row超集拥有Row全部功能方法,而外增加的方法
+///ZRow.withSpacing 根据长度分割
+///ZRow.withSeparated 根据组件分割
+class ZRow extends Row{
+  ///根据[spacing]长度分割内容的Row方法
   ZRow.withSpacing({
     super.key,
     double spacing = 0.0,
@@ -20,7 +15,8 @@ class ZRow extends Row {
     super.crossAxisAlignment,
     super.textDirection,
     super.verticalDirection,
-    super.textBaseline,}):super(children: _addSeparated(children,spacing: spacing));
+    super.textBaseline,}):super(children: Zui.addSeparated(children,spacing: spacing,direction: Axis.horizontal));
+  ///根据[separated]组件分割内容的Row方法
   ZRow.withSeparated({
     super.key,
     required Widget separated,
@@ -30,15 +26,6 @@ class ZRow extends Row {
     super.crossAxisAlignment,
     super.textDirection,
     super.verticalDirection,
-    super.textBaseline,}):super(children: _addSeparated(children,separated: separated));
-  static List<Widget> _addSeparated(List<Widget> children, {double spacing = 0.0,Widget? separated}) {
-    final spacedChildren = <Widget>[];
-    for (var i = 0; i < children.length; i++) {
-      spacedChildren.add(children[i]);
-        if (i != children.length - 1) {
-          spacedChildren.add(separated??SizedBox(width: spacing));
-        }
-      }
-      return spacedChildren;
-  }
+    super.textBaseline,}):super(children: Zui.addSeparated(children,separated: separated,direction: Axis.horizontal));
+
 }
