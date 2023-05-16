@@ -8,6 +8,11 @@ z_ui:
     git:  
         url: https://github.com/zrbyhelp/z_ui_flutter.git  
 ```  
+    或者通过命令行安装
+```bash
+$ flutter pub add z_ui
+..
+```
 ### 安装  
     通过命令行安装该内容  
 ```bash
