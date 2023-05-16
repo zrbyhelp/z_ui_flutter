@@ -6,7 +6,7 @@
 ### 引用  
 `pubspec.yaml`文件`dependencies:`下增加以下内容引用:  
 ```yaml
-z_ui_flutter:  
+z_ui:  
     git:  
         url: https://github.com/zrbyhelp/z_ui_flutter.git  
 ```  
