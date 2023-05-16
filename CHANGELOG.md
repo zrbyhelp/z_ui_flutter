@@ -1,3 +1,2 @@
 ## 0.0.1
-
-* TODO: Describe initial release.
+实现了row与column的超集,实现了根据组件分割与数值分割的方法
